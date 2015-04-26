@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/fiftyteen_dp"
+    android:paddingRight="@dimen/fiftyteen_dp"
+    android:paddingTop="@dimen/twenty_dp"
+    android:paddingBottom="@dimen/twenty_dp"
+    android:orientation="vertical" >
+    
+    
+    <TextView
+        android:id="@+id/txt_viewpager_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/twenty_two_sp"/>
+    
+
+</LinearLayout>
