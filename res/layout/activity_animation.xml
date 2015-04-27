@@ -9,17 +9,24 @@
             android:id="@+id/animation_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="?attr/actionBarSize"
+            android:paddingTop="@dimen/seventy_three_sp"
             android:background="@drawable/layer_viewpager_bg" />
     
        <include  
            android:id="@+id/home_toolbar"
            layout="@layout/toolbar"/>
        
+      <com.example.titleanimation.CircleIndicator
+            android:id="@+id/indicator_default"
+            android:layout_width="match_parent"
+            android:layout_below="@id/home_toolbar"
+            android:background="@android:color/transparent"
+            android:layout_height="25dp"/>
+       
         <View android:layout_width="match_parent"
            android:layout_height="@dimen/four_dp"
            android:background="@drawable/toolbar_shadow"
-           android:layout_below="@id/home_toolbar"/>
+           android:layout_below="@id/indicator_default"/>
     
 
 </RelativeLayout>

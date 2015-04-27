@@ -1,6 +1,6 @@
 package com.example.titleanimation;
 
-import android.graphics.PorterDuff;
+import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ public class AnimationActivity extends ActionBarActivity {
 	private ViewPager animationViewPager;
 	private AnimationPagerAdapter animationPagerAdapter;
 	public Toolbar homeToolBar;
+	private CircleIndicator circleIndicator;
+	private String[] titles =  new String[]{"Football","Circket","Golf"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +24,18 @@ public class AnimationActivity extends ActionBarActivity {
 	
 		
 		homeToolBar = (Toolbar) findViewById(R.id.home_toolbar);
+		circleIndicator = (CircleIndicator) findViewById(R.id.indicator_default);
+		
 		if(homeToolBar!=null){
 			setSupportActionBar(homeToolBar);
 		}
 		animationViewPager = (ViewPager) findViewById(R.id.animation_viewpager);
 		animationPagerAdapter = new AnimationPagerAdapter(getSupportFragmentManager());
 		animationViewPager.setAdapter(animationPagerAdapter);
+		circleIndicator.setViewPager(animationViewPager);
 		
 		final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-		upArrow.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
+		upArrow.setColorFilter(getResources().getColor(android.R.color.white),Mode.SRC_ATOP);
 		getSupportActionBar().setHomeAsUpIndicator(upArrow);
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -48,7 +53,7 @@ public class AnimationActivity extends ActionBarActivity {
                 int index = (Integer) view.getTag();
                 Drawable currentDrawableInLayerDrawable;
                 currentDrawableInLayerDrawable = background.getDrawable(index);
-
+                
                 if(position <= -1 || position >= 1) {
                     currentDrawableInLayerDrawable.setAlpha(0);
                 } else if( position == 0 ) {

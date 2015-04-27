@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/fiftyteen_dp"
     android:paddingRight="@dimen/fiftyteen_dp"
-    android:paddingTop="@dimen/twenty_dp"
+    android:paddingTop="@dimen/thirty_dp"
     android:paddingBottom="@dimen/twenty_dp"
     android:orientation="vertical" >
     
@@ -16,7 +16,7 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/twenty_two_sp"/>
+        android:textSize="@dimen/thirty_sp"/>
     
 
 </LinearLayout>
