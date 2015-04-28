@@ -23,14 +23,14 @@ public class GolfFragment extends Fragment{
 			((TextView)mView.findViewById(R.id.txt_viewpager_item_header)).setText("Golf Content");
 			
 			for (int i = 0; i <= totalChapter; i++) {
-				for (int j = 0; j <=numberofTopics[i]; j++) {
-					if((i!=1 && j!=3)||(i!=4 && j!=1)){
-						for (int k = 0; k <=subtopics; k++) {
-							
-						}
+				for (int j = 0; j <= numberofTopics[i]; j++) {
+					if((i==1 && j==3)||(i==4 && j==1)){
+						Log.d("Path", "("+i+","+j+","+1+")");
 					}
-					else{
-						
+					else{	
+						for (int k = 0; k <=subtopics; k++) {
+							Log.d("Path", "("+i+","+j+","+k+")");	
+							}
 					}
 				}
 			}
